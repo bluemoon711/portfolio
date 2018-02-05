@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const app = express();
 require("dotenv").config();
 
+var port = process.env.PORT || 8080;
+
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -25,6 +27,6 @@ const msg = {
 };
 sgMail.send(msg);
 
-app.listen(8080, () =>{
-    console.log('Listening at http://localhost:8080');
+app.listen(port, () =>{
+    console.log('Listening at http://localhost:' + port);
 })
