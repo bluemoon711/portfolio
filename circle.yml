@@ -1,0 +1,8 @@
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: yf-ejs-workshop
+machine:
+  node:
+    version: 8.1.4

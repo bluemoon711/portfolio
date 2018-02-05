@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <% include ./head %>
+    <title> Ying's Portfolio </title>
+  </head>
+  <style>
+    p {
+      font-family: courier;
+      font-size: 160%;
+    }
+    .jumbotron {
+      background-color: #f49b41;
+    }
+    .card {
+      margin: 50px;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <% include ./nav %>
+    <div class="jumbotron jumbotron-fluid">
+      <h1 class="dispaly-3">Hey, I am <%=person.firstName %> <%=person.lastName %> ;)</h1>
+      <p class="lead">I am a Web Developer, living in San Diego, CA.</p>
+    </div>
+    <div>
+     <a href=<%=person.url %>>Link to my github</a> 
+    </div>
+    <div class="card" style="width: 22rem;">
+      <div class="card-header">
+        Some of my projects
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> 
+          <a href="https://github.com/bluemoon711/startnow-web101-astro-weight-calculator" class="card-link">Astro Weight Calculator</a></li>
+        <li class="list-group-item">
+          <a href="https://github.com/bluemoon711/startnow-web101-san-diego-top-spots" class="card-link">San Diego Top Spots</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://github.com/bluemoon711/startnow-db100-mysql-exercises" class="card-link">Mysql Exercises</a>
+        </li>
+        </ul>
+      </div> 
+    </div>
+    <% include ./footer %>
+  </body>
+</html>
